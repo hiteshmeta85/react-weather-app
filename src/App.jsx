@@ -1,7 +1,11 @@
+import WeatherSection from "./components/WeatherSection/WeatherSection.jsx";
+
 function App() {
 
   return (
-    <div>Hello Developers!</div>
+    <div className='container'>
+      <WeatherSection/>
+    </div>
   )
 }
 
