@@ -17,10 +17,7 @@ const Summary = ({ day, date, location, icon, temperature, type }) => {
           src={`https://openweathermap.org/img/w/${icon}.png`}
           alt='weather icon'
         />
-        <p className='weather__temp'>
-          {temperature}
-          <sup> o</sup>C
-        </p>
+        <p className='weather__temp'>{temperature}&#8451;</p>
         <p className='weather__type'>{type}</p>
       </div>
     </div>

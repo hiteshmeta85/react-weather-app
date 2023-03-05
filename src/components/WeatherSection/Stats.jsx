@@ -5,9 +5,7 @@ const Stats = ({ weatherData }) => {
     <div className='weather__stat__section'>
       <div className='weather__stat'>
         <p>FEELS LIKE</p>
-        <p>
-          {weatherData.main.feels_like} <sup>o</sup>C
-        </p>
+        <p>{weatherData.main.feels_like} &#8451;</p>
       </div>
       <div className='weather__stat'>
         <p>HUMIDITY</p>
