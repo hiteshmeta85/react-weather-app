@@ -15,10 +15,10 @@ const WeatherSection = () => {
   const [weatherData, setWeatherData] = useState();
   const [currentLocation, setCurrentLocation] = useState('Panvel');
 
-  const fetchData = async location => {
+  const fetchWeatherHandler = async () => {
     setIsLoading(true);
     try {
-      const data = await fetchWeather(location);
+      const data = await fetchWeather(currentLocation);
       setWeatherData(data);
       setIsLoading(false);
       setDidWeatherDataLoad(true);
@@ -28,7 +28,7 @@ const WeatherSection = () => {
   };
 
   useEffect(() => {
-    fetchData(currentLocation);
+    fetchWeatherHandler();
   }, []);
 
   return (
@@ -49,7 +49,11 @@ const WeatherSection = () => {
       )}
       <div className='weather__right__section'>
         <Stats />
-        <Form />
+        <Form
+          currentLocation={currentLocation}
+          setCurrentLocation={setCurrentLocation}
+          onSubmitHandler={fetchWeatherHandler}
+        />
       </div>
     </div>
   );
