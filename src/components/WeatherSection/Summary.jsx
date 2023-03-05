@@ -7,7 +7,7 @@ const Summary = ({ day, date, location, icon, temperature, type }) => {
         <p className='weather__day'>{day}</p>
         <p className='weather__date'>{date}</p>
         <div className='weather__location'>
-          <img src='/src/assets/location-marker.svg' alt='marker icon' />
+          <img src='/location-marker.svg' alt='marker icon' />
           <p>{location}</p>
         </div>
       </div>
