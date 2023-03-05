@@ -135,6 +135,7 @@ p {
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   color: white;
   padding-bottom: 2rem;
@@ -143,6 +144,8 @@ p {
 .top__city__card {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  height: 22vh;
   gap: 1rem;
   padding: 2rem 4rem 2rem 2rem;
   justify-content: center;
