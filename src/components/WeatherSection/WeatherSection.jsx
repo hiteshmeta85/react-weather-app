@@ -31,24 +31,38 @@ const WeatherSection = () => {
     fetchWeatherHandler();
   }, []);
 
+  let leftSectionContent;
+  let rightSectionContent;
+
+  if (isLoading || !didWeatherDataLoad) {
+    const textContent = isLoading ? 'Loading...' : 'Weather data not available';
+    leftSectionContent = (
+      <p className='weather__summary__section'>{textContent}</p>
+    );
+    rightSectionContent = (
+      <p className='weather__stat__section'>{textContent}</p>
+    );
+  }
+
+  if (!isLoading && didWeatherDataLoad) {
+    leftSectionContent = (
+      <Summary
+        date={DATE}
+        day={DAY}
+        icon={weatherData.weather[0].icon}
+        location={weatherData.name}
+        temperature={weatherData.main.temp}
+        type={weatherData.weather[0].main}
+      />
+    );
+    rightSectionContent = <Stats weatherData={weatherData} />;
+  }
+
   return (
     <div className='weather'>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : didWeatherDataLoad ? (
-        <Summary
-          date={DATE}
-          day={DAY}
-          icon={weatherData.weather[0].icon}
-          location={weatherData.name}
-          temperature={weatherData.main.temp}
-          type={weatherData.weather[0].main}
-        />
-      ) : (
-        <p>Weather data not available</p>
-      )}
+      {leftSectionContent}
       <div className='weather__right__section'>
-        <Stats />
+        {rightSectionContent}
         <Form
           currentLocation={currentLocation}
           setCurrentLocation={setCurrentLocation}

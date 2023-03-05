@@ -21,6 +21,8 @@ p {
 .weather {
   display: flex;
   padding: 2rem;
+  height: 45vh;
+  width: 50vw;
 }
 
 .weather__summary__section {
