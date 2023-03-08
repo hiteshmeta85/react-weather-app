@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WeatherCard = ({ city, weatherData }) => {
+const WeatherCard = ({city, weatherData}) => {
   if (!weatherData) {
     return <p className='top__city__card'>Loading...</p>;
   }

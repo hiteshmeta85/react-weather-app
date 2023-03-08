@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { fetchWeather } from '../../api/index.js';
+import React, {useEffect, useState} from 'react';
+import {fetchWeather} from '../../api/index.js';
 import WeatherCard from './WeatherCard.jsx';
 
 const TOP_CITIES = ['Paris', 'New York', 'Tokyo', 'London', 'Dubai'];

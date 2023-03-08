@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { fetchWeather } from '../../api/index.js';
+import React, {useEffect, useState} from 'react';
+import {fetchWeather} from '../../api/index.js';
 import Form from './Form.jsx';
 import Stats from './Stats.jsx';
 import Summary from './Summary.jsx';
 
 const TODAY = new Date();
-const DAY = TODAY.toLocaleString('default', { weekday: 'long' });
-const DATE =
-  TODAY.toLocaleString('default', { month: 'long' }) + ' ' + TODAY.getDate();
+const DAY = TODAY.toLocaleString('default', {weekday: 'long'});
+const DATE = TODAY.toLocaleString('default', {month: 'long'}) + ' ' + TODAY.getDate();
 
 const WeatherSection = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -55,7 +54,7 @@ const WeatherSection = () => {
         type={weatherData.weather[0].main}
       />
     );
-    rightSectionContent = <Stats weatherData={weatherData} />;
+    rightSectionContent = <Stats weatherData={weatherData}/>;
   }
 
   return (

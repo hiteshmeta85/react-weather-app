@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Stats = ({ weatherData }) => {
+const Stats = ({weatherData}) => {
   return (
     <div className='weather__stat__section'>
       <div className='weather__stat'>
