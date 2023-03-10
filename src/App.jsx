@@ -1,15 +1,13 @@
-import WeatherSection from "./components/WeatherSection/WeatherSection.jsx";
-import React from "react";
-import TopCitiesSection from "./components/TopCitiesSection/TopCitiesSection.jsx";
+import TopCitiesSection from './components/TopCitiesSection/TopCitiesSection';
+import WeatherSection from './components/WeatherSection/WeatherSection';
 
 function App() {
-
   return (
     <div className='container'>
-      <WeatherSection/>
-      <TopCitiesSection/>
+      <WeatherSection />
+      <TopCitiesSection />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

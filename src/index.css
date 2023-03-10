@@ -15,7 +15,9 @@ p {
 
 .container {
   min-height: 100vh;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .weather {
@@ -133,11 +135,11 @@ p {
   margin-top: 4rem;
   display: grid;
   flex-wrap: wrap;
-    gap: 20px;
+  gap: 20px;
   width: 100%;
   color: white;
-    padding-bottom: 4rem;
-    grid: 200px / 1fr 1fr 1fr 1fr 1fr;
+  padding-bottom: 4rem;
+  grid: 200px / 1fr 1fr 1fr 1fr 1fr;
 }
 
 .top__city__card {
@@ -148,7 +150,7 @@ p {
   justify-content: center;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
-    margin: 0 1rem 0 2rem;
+  margin: 0 1rem 0 2rem;
 }
 
 .top__city__card__city {
@@ -174,15 +176,14 @@ p {
   font-size: 0.9rem;
 }
 
-
 @media (max-width: 1024px) {
-    .top__cities__section{
-        grid: 200px / 1fr 1fr 1fr;
-    }
+  .top__cities__section {
+    grid: 200px / 1fr 1fr 1fr;
+  }
 
-    .top__city__card{
-        padding: 2rem 2rem 2rem 2rem;
-    }
+  .top__city__card {
+    padding: 2rem 2rem 2rem 2rem;
+  }
 }
 
 @media (max-width: 550px) {
@@ -211,7 +212,7 @@ p {
 
   .top__cities__section {
     margin-top: 1rem;
-      grid: 200px / 1fr 1fr;
+    grid: 200px / 1fr 1fr;
   }
 
   .top__city__card {
