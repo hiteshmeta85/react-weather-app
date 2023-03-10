@@ -1,19 +1,17 @@
-import React from 'react';
-
-const Stats = ({weatherData}) => {
+const Stats = ({ feelsLike, humidity, speed }) => {
   return (
     <div className='weather__stat__section'>
       <div className='weather__stat'>
         <p>FEELS LIKE</p>
-        <p>{weatherData.main.feels_like} &#8451;</p>
+        <p>{feelsLike} &#8451;</p>
       </div>
       <div className='weather__stat'>
         <p>HUMIDITY</p>
-        <p>{weatherData.main.humidity} %</p>
+        <p>{humidity} %</p>
       </div>
       <div className='weather__stat'>
         <p>WIND</p>
-        <p>{weatherData.wind.speed} km/h</p>
+        <p>{speed} km/h</p>
       </div>
     </div>
   );

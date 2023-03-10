@@ -42,7 +42,13 @@ const WeatherSection = () => {
         />
       )}
       <div className='weather__right__section'>
-        {!isLoading && weatherData && <Stats weatherData={weatherData} />}
+        {!isLoading && weatherData && (
+          <Stats
+            feelsLike={weatherData.main.feels_like}
+            humidity={weatherData.main.humidity}
+            speed={weatherData.wind.speed}
+          />
+        )}
         <Form
           currentLocation={currentLocation}
           setCurrentLocation={setCurrentLocation}
