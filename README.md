@@ -1,7 +1,5 @@
 # React Weather App
 
-#### [Website](https://react-weather-app-prod.vercel.app/)
-
 ## Installation
 
 1. Clone the repository or download the zip file
